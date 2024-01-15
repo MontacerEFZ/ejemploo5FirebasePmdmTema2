@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159070967706",
+    "project_id": "ejemplofirebasebpmdmtema2",
+    "storage_bucket": "ejemplofirebasebpmdmtema2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159070967706:android:a5ddb27435911aab140c23",
+        "android_client_info": {
+          "package_name": "montacer.elfazazi.ejemplo5firebasepmdmtema2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgoetmgK88CP9SGVzxNN7FB8OKj4P5-0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
