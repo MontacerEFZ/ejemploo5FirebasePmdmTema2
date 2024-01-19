@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,6 +50,19 @@ public class MainActivity extends AppCompatActivity {
                 myPersona.setValue(p);
                 listaPersonas.add(p);
                 myListPersonas.setValue(listaPersonas);
+            }
+        });
+
+        myListPersonas.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()){
+                    GenericTypeIndicator<ArrayList<Persona>> gti = new GenericTypeIndicator<ArrayList<Persona>>() {};
+                        ArrayList<Persona> aux = task.getResult().getValue(gti);
+                    if (aux != null){
+                        listaPersonas.addAll(aux);
+                    }
+                }
             }
         });
 
